@@ -23,10 +23,6 @@ module.exports = function (app, config) {
         resave:false,
         saveUninitialized: false
     };
-    if (config.env === 'production') {
-        app.set('trust proxy', 1); // trust first proxy
-        sess.cookie.secure = true; // serve secure cookies
-    }
     app.use(session(sess));
 
     //errorHandler
