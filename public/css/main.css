@@ -1,0 +1,41 @@
+
+html{
+    background: lawngreen;
+}
+
+.uk-offcanvas.uk-active .uk-offcanvas-bar{
+    background: transparent;
+    color: black;
+}
+
+.uk-nav-offcanvas>.uk-open>a, html:not(.uk-touch) .uk-nav-offcanvas>li>a:focus, html:not(.uk-touch){
+    color:black;
+    padding:20px 0 20px 0;
+    font-size:40px;
+}
+
+.uk-nav-offcanvas>li>a{
+    padding:20px 0 20px 0;
+}
+
+.uk-nav, .uk-nav ul{
+    padding:20px 0 5px 0;
+    color: black;
+}
+
+.uk-nav-offcanvas>li>a{
+    color:black;
+}
+
+.main{
+    padding:5px;
+}
+
+.uk-navbar{
+    background-color: white;
+    height:60px;
+}
+
+.view{
+    background:white;
+}

@@ -1,0 +1,29 @@
+{
+  "name": "bpl",
+  "version": "1.0.0",
+  "description": "bpl landing page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines":{
+    "node":"5.3.x",
+    "npm":"3.3.x"
+  },
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "cookie-parser": "^1.4.1",
+    "errorhandler": "^1.4.2",
+    "express": "^4.13.3",
+    "express-session": "^1.13.0",
+    "jade": "^1.11.0",
+    "kerberos": "0.0.18",
+    "morgan": "^1.6.1",
+    "multer": "^1.1.0",
+    "node-gyp": "^3.2.1",
+    "serve-favicon": "^2.3.0",
+    "serve-static": "^1.10.1"
+  },
+  "author": "mkds <madhudskumar@live.in>",
+  "license": "MIT"
+}
