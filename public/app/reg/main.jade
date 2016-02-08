@@ -1,0 +1,35 @@
+div#reg
+    div.regHeader
+        h1.reg.uk-vertical-align-middle.uk-container.uk-container-center(style='') Register
+
+    div.uk-width-1-1.uk-vertical-align.uk-vertical-align-middle.uk-container.uk-container-center(style='font-size:20px;margin-top:50px;text-align:center')
+        form.uk-form.uk-form-stacked(name='regForm')
+            div#content.uk-form-row
+                input.uk-form-controls#teamName.uk-form-width-large.uk-form-large(type='text' placeholder='TEAM NAME' required pattern='(.){3,20}' ng-model='teamName')
+                br
+                br
+                br
+                input.uk-form-controls#cap.uk-form-width-large.uk-form-large(type='text' placeholder='CAPTAIN' required ng-model='cap')
+                br
+                br
+                br
+                input.uk-form-controls#pwd.uk-form-width-large.uk-form-large(type='password' placeholder='PASSWORD' required ng-model='pwd')
+
+            div.uk-flex.uk-flex-center(style='margin:20px;text-align:center')
+                button.uk-button.uk-button-primary(ng-click='logIn()' ng-disabled='regForm.$invalid' style='font-size:24px') REGISTER
+                button.uk-button.uk-button-default(ng-click='cancelForm()'  style='font-size:24px;margin-left:12px') CANCEL
+
+script.
+    $("#reg").height($(window).height()/1.09);
+
+    $(window).resize(function(){
+        $("#reg").height($(window).height()/1.09)
+    })
+
+|<style>
+| .uk-navbar{
+|     background-color: black;
+| }
+|.uk-navbar-toggle{color:lawngreen;}
+|.uk-navbar-toggle:hover{color:lawngreen;}
+|<\style>

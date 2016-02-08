@@ -1,3 +1,6 @@
+*{
+    font-family: 'Titillium Web', sans-serif;
+}
 
 html{
     background: lawngreen;
@@ -10,7 +13,6 @@ html{
 
 .uk-nav-offcanvas>.uk-open>a, html:not(.uk-touch) .uk-nav-offcanvas>li>a:focus, html:not(.uk-touch){
     color:black;
-    padding:20px 0 20px 0;
     font-size:40px;
 }
 
@@ -28,7 +30,7 @@ html{
 }
 
 .main{
-    padding:5px;
+    padding:10px;
 }
 
 .uk-navbar{
@@ -38,4 +40,31 @@ html{
 
 .view{
     background:white;
+}
+
+.reg{
+    width:100%;
+    height:auto;
+    padding-top:60px;
+    color:white;
+    text-align:center;
+    font-family: 'Titillium Web', sans-serif;
+    font-size:60px;
+}
+
+.regHeader{
+    width:100%;
+    background:black;
+    height:200px
+}
+
+@media screen and (max-width:420px) {
+    .reg{
+        padding-top:30px;
+        font-size:30px;
+    }
+
+    .regHeader {
+        height:100px;
+    }
 }

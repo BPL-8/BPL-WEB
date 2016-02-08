@@ -7,7 +7,11 @@ bplApp.config(
         $routeProvider
             .when('/index',{
                 templateUrl:'/partials/Main/main',
-                controller:'nMainCtrl'
+                controller:'bMainCtrl'
+            })
+            .when('/reg',{
+                templateUrl:'/partials/reg/main',
+                controller:'bRegCtrl'
             })
             .otherwise({redirectTo:'/index'})
     }
