@@ -1,6 +1,6 @@
-div(ng-controller='bHeaderCtrl')
+div.header(ng-controller='bHeaderCtrl')
     nav.uk-navbar(style='padding-top:12px')
-        a.uk-navbar-brand(ng-href='/')
+        a.uk-navbar-brand.brand(ng-href='/')
             img(ng-src='/images/bpl_logo.png' style='height:50px')
         div.uk-navbar-flip
             a.uk-navbar-toggle(ng-href='#sidebar' data-uk-offcanvas style='font-size:34px;padding-top:12px')
@@ -11,6 +11,8 @@ div#sidebar.uk-offcanvas
             li
                 a(ng-href='/reg' style='padding-left:12px') REGISTER
             li
-                a(ng-href='/help' style='padding-left:12px') HELP
+                a(ng-href='/rules' style='padding-left:12px') RULES
             li
                 a(ng-href='/about' style='padding-left:12px') ABOUT US
+        strong.uk-vertical-align-middle(style='text-align:center;font-size:17px;margin:0 15px;')
+                small &copy; 2016 mkds

@@ -4,6 +4,7 @@
 
 html{
     background: lawngreen;
+    overflow: auto;
 }
 
 .uk-offcanvas.uk-active .uk-offcanvas-bar{
@@ -58,6 +59,14 @@ html{
     height:200px
 }
 
+#main{
+    background: url("../images/_original.jpg") no-repeat top right;
+    background-size: cover;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
 @media screen and (max-width:420px) {
     .reg{
         padding-top:30px;

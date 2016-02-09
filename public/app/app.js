@@ -13,6 +13,12 @@ bplApp.config(
                 templateUrl:'/partials/reg/main',
                 controller:'bRegCtrl'
             })
+            .when('/rules',{
+                templateUrl:'/partials/rules/main'
+            })
+            .when('/about',{
+                templateUrl:'/partials/about/main'
+            })
             .otherwise({redirectTo:'/index'})
     }
 );
