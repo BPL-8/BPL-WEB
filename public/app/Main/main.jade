@@ -18,14 +18,33 @@ div#main
             strong.uk-vertical-align-middle(style='text-align:center;font-size:17px;margin:0 15px;')
                 small &copy; 2016 mkds
 
-    div#content.uk-container.uk-container-center(style='text-align:center;')
-        h1.uk-width-1-1.uk-height-1-1.uk-vertical-align.uk-vertical-align-middle(style='color:lawngreen') BPL - 8.0
+
+    div#mainHeader.uk-container.uk-container-center
+        div#heading.uk-container-center.uk-container(style='color:lawngreen')
+            p.hea BIET
+            p.hea PREMIER
+            p.hea LEAGUE - 8
+
+    section#bottom.uk-width-1-1(style='background:transparent;padding-top:200px')
+        div(style='background:black')
+            div#reg
+                div.uk-container.uk-container-center
+                    a#regBtn.uk-button.uk-align-center(ng-href='/reg' style='') REGISTER TODAY
+
+            hr.uk-container.uk-container-center(style='border:2px solid lawngreen')
+
+            div#stat(style='color:lawngreen;padding:12px')
+                p(style="text-align:center;font-weight:bolder") INAUGURATION ON 15 - FEB - 2015
+                div(style='text-align:center')
+                    p VENUE: BIET CRICKET GROUND
+                    p TIME: 4:15pm
+
 
 script.
-    $("#main").height($(window).height()/1.02);
+    $("#main").height($(window).height() / 1.025);
 
-    $(window).resize(function(){
-        $("#main").height($(window).height()/1.01)
+    $(window).resize(function () {
+        $("#main").height($(window).height() / 1.025)
     })
 
 |<style>

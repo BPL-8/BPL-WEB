@@ -57,6 +57,7 @@ html{
     width:100%;
     background:black;
     height:200px
+
 }
 
 #main{
@@ -67,7 +68,49 @@ html{
     box-sizing: border-box;
     position: relative;
 }
+
+#regBtn{
+    background: transparent;
+    color: lawngreen;
+    font-size: 60px;
+    font-weight:bolder;
+    padding-top:60px;
+
+}
+
+#brand{
+    margin:20px auto;
+}
+
+#bottom{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: black;
+}
+
+#heading{
+    padding-top: 50px;
+}
+
+.hea{
+    color:lawngreen;
+    text-align:left;
+    font-family: "Lobster", cursive;
+    font-size:50px;
+    padding-top: 20px;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg);
+    -o-transform: rotate(-20deg);
+    transform: rotate(-20deg);
+}
+
 @media screen and (max-width:420px) {
+    #regBtn{
+        font-size: 1.5em;
+    }
+
     .reg{
         padding-top:30px;
         font-size:30px;
