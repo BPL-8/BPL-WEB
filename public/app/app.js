@@ -17,7 +17,8 @@ bplApp.config(
                 templateUrl:'/partials/rules/main'
             })
             .when('/about',{
-                templateUrl:'/partials/about/main'
+                templateUrl:'/partials/about/main',
+                controller:'bAboutCtrl'
             })
             .otherwise({redirectTo:'/index'})
     }
