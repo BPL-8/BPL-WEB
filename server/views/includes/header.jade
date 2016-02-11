@@ -3,7 +3,7 @@ div.header(ng-controller='bHeaderCtrl')
         a.uk-navbar-brand.brand(ng-href='/')
             img(ng-src='/images/bpl_logo.png' style='height:50px')
         div.uk-navbar-flip
-            a.uk-navbar-toggle(ng-href='#sidebar' data-uk-offcanvas style='font-size:34px;padding-top:12px')
+            a.uk-navbar-toggle(onclick="jQuery.UIkit.offcanvas.show('#sidebar');" data-uk-offcanvas style='font-size:34px;padding-top:12px')
 
 div#sidebar.uk-offcanvas
     div.uk-offcanvas-bar.uk-offcanvas-bar-flip(onclick="jQuery.UIkit.offcanvas.hide();$('body').height($(window).height());")
