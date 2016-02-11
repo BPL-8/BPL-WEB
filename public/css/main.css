@@ -119,6 +119,10 @@ html{
     .regHeader {
         height:100px;
     }
+
+    .hea{
+        font-size:40px;
+    }
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
