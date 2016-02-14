@@ -147,8 +147,5 @@ html{
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    z-index: 9999;
-    padding-top: 200px;
-    background: url("https://thomas.vanhoutte.be/miniblog/wp-content/uploads/light_blue_material_design_loading.gif") no-repeat center white;
-    margin: auto auto;
+    display: none;
 }
