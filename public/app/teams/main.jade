@@ -5,7 +5,7 @@ div#gallery
 div.uk-container.uk-container-center.team-container(style='background:#f2f2f4')
     div.team(ng-repeat="team in teams " ng-hide='!team.qualifiedForNext'  style='padding:15px;background:white')
         div.uk-grid.uk-width-1-1
-            h1.uk-h1.uk-width-4-5(style='text-align:left') {{team.teamName}}
+            h1.uk-h1.uk-width-4-5(style='text-align:left') {{team.teamName | uppercase}}
             button.uk-button(style='margin:auto 0 auto auto;background:transparent' ng-click='openModal(team)')
                 i.uk.uk-icon-ellipsis-h
 
