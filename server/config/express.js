@@ -5,12 +5,16 @@ var morgan = require('morgan'),
     bodyParser = require('body-parser'),
     errorHandler = require('errorhandler'),
     passport = require('passport'),
+    helmet = require('helmet'),
     cookieParser = require('cookie-parser');
 
 module.exports = function (app, config) {
     //jade
     app.set('views', config.rootPath + '/server/views');
     app.set('view engine', 'jade');
+
+    //helmet
+    app.use(helmet());
 
     //body parser
     app.use(bodyParser.json());
