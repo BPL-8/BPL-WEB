@@ -15,6 +15,9 @@ require('./server/config/express')(app, config);
 //configure mongoose
 require('./server/config/mongoose')(config);
 
+//configure passport
+require('./server/config/passport')();
+
 //configure routes
 require('./server/routes/router')(app);
 

@@ -6,9 +6,6 @@ exports.addTeam = function (req, res, next) {
         res.send();
     }else if(req.user.userName == req.body.data.user.userName){
         var team = req.body.data.team;
-
-        console.log(team);
-
         Team.create({
             teamName:team.teamName,
             teamCaptain:team.captain,
@@ -36,7 +33,6 @@ exports.addTeam = function (req, res, next) {
 
 exports.updateTeam = function (req, res, next) {
     if(req.user){
-        console.log(req.body)
         res.send(true);
     }else{
         res.status(400);
