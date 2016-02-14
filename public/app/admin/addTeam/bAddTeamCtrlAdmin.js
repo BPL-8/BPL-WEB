@@ -13,5 +13,15 @@ bplApp.controller('bAddTeamCtrlAdmin',
                     console.log('err occurred !')
                 })
         }
+
+        $scope.options = [
+            {id:1 , name:"TEXTILE"},
+            {id:2 , name:"MECHANICAL"},
+            {id:3 , name:"E & E"},
+            {id:4 , name:"IS"},
+            {id:5 , name:"EC"},
+            {id:6 , name:"CHEMICAL"},
+            {id:7 , name:"CS & E"}
+        ]
     }
 );
