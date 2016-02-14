@@ -17,7 +17,7 @@ bplApp.config(
                 templateUrl:'/partials/Main/main',
                 controller:'bMainCtrl'
             })
-            .when('/reg',{
+            .when('/about',{
                 templateUrl:'/partials/reg/main',
                 controller:'bRegCtrl'
             })
