@@ -4,6 +4,7 @@ var morgan = require('morgan'),
     session = require('express-session'),
     bodyParser = require('body-parser'),
     errorHandler = require('errorhandler'),
+    passport = require('passport'),
     cookieParser = require('cookie-parser');
 
 module.exports = function (app, config) {
@@ -35,4 +36,7 @@ module.exports = function (app, config) {
     app.use(express.static(config.rootPath + '/public'));
 
     app.use(fav(config.rootPath + '/public/favicon/favicon.ico'));
+
+    app.use(passport.initialize());
+    app.use(passport.session());
 };

@@ -1,5 +1,7 @@
 'use strict';
 var mongoose = require('mongoose');
+var Team = require('../model/team');
+var User = require('../model/User');
 
 module.exports = function (config) {
     mongoose.connect(config.db);
@@ -13,4 +15,7 @@ module.exports = function (config) {
     db.once('open', function callback() {
         console.log('connection open on ' + config.db);
     });
+
+    Team.createDefault();
+    User.createDefaultUsers();
 };

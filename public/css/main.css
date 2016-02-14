@@ -69,6 +69,17 @@ html{
     position: relative;
 }
 
+.head{
+    font-family:'Kaushan Script', cursive;
+    color:lawngreen;
+    font-size: 40px;
+    margin-top: 7px;
+}
+
+.head:hover{
+    color: lawngreen;
+}
+
 #regBtn{
     background: transparent;
     color: lawngreen;
@@ -106,6 +117,17 @@ html{
     transform: rotate(-20deg);
 }
 
+.team{
+    margin:20px;
+    background: #eaeaec;
+}
+
+.team:hover{
+    -webkit-box-shadow: 0 2px 7px grey;
+    -moz-box-shadow: 0 2px 7px grey;
+    box-shadow: 0 0px 7px -2px grey;
+}
+
 @media screen and (max-width:420px) {
     #regBtn{
         font-size: 1.5em;
@@ -125,5 +147,6 @@ html{
 }
 
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
-    display: none !important;
+    background: url("https://thomas.vanhoutte.be/miniblog/wp-content/uploads/light_blue_material_design_loading.gif") no-repeat center;
+    margin: auto auto;
 }
