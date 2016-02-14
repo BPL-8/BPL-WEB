@@ -7,8 +7,8 @@ html(lang='en')
         link(href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css')
         link(href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css')
-        //base(href="http://localhost:7777/")
-        base(href="http://www.bpl8.info/")
+        base(href="http://localhost:7777/")
+        //base(href="http://www.bpl8.info/")
         title BPL
 
         |<meta charset="utf-8">
@@ -23,7 +23,7 @@ html(lang='en')
         |    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
         |<![endif]-->
     body.uk-width-1-1(ng-cloak, ng-app='bplApp')
-        div.main.uk-width-1-1
+        div.main.uk-width-1-1(ng-cloak)
             include ./header
             block main
             include ./scripts
