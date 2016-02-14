@@ -1,5 +1,7 @@
 bplApp.controller('bAddTeamCtrlAdmin',
     function bAddTeamCtrlAdmin ($scope, bTeamSvcAdmin, bIdentity) {
+        $scope.team = {};
+
         $scope.addTeamToDB = function (team) {
             if(!team){
                 console.log('no Team');
@@ -8,11 +10,12 @@ bplApp.controller('bAddTeamCtrlAdmin',
 
             bTeamSvcAdmin.addTeam(team, bIdentity.currentUser)
                 .then(function () {
-                    console.log('added!')
+                    console.log('added!');
+                    $scope.team = {};
                 }, function () {
                     console.log('err occurred !')
                 })
-        }
+        };
 
         $scope.options = [
             {id:1 , name:"TEXTILE"},
