@@ -1,5 +1,5 @@
 bplApp.controller('bAddTeamCtrlAdmin',
-    function bAddTeamCtrlAdmin ($scope, bTeamSvcAdmin, bIdentity) {
+    function bAddTeamCtrlAdmin ($scope, bTeamSvcAdmin) {
         $scope.team = {};
 
         $scope.addTeamToDB = function (team) {
@@ -8,7 +8,7 @@ bplApp.controller('bAddTeamCtrlAdmin',
                 return;
             }
 
-            bTeamSvcAdmin.addTeam(team, bIdentity.currentUser)
+            bTeamSvcAdmin.addTeam(team)
                 .then(function () {
                     console.log('added!');
                     $scope.team = {};

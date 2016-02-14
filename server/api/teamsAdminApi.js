@@ -32,8 +32,22 @@ exports.addTeam = function (req, res, next) {
 };
 
 exports.updateTeam = function (req, res, next) {
-    if(req.user){
-        res.send(true);
+    if(!req.user){
+        res.status(400);
+        res.send();
+    }else if(req.user.userName === req.body.user.userName){
+        var updateTeam = req.body.team;
+
+        Team.findById({_id:updateTeam._id}).exec(function (err, team) {
+           if(err) res.send({reason:'err occurred'});
+
+            team.ScoreForThisRound = updateTeam.ScoreForThisRound;
+            team.ScoreTotal = updateTeam.ScoreTotal;
+            team.qualifiedForNext = updateTeam.qualifiedForNext;
+
+            team.save();
+            res.send(true);
+        });
     }else{
         res.status(400);
         res.send()

@@ -1,27 +1,43 @@
 bplApp.factory('bTeamSvcAdmin',
-    function ($resource, $q) {
-        var teamApi = $resource('/api/v1/manageTeam:tId', {tId:"@id"});
+    function ($resource, $q, bIdentity) {
+        var teamApi = $resource('/api/v1/manageTeam:tId', {tId:"@id"},{
+            update:{method:'PUT', isArray:false}
+        });
 
         return{
-            addTeam: function (team, user) {
+            addTeam: function (team) {
                 var dfd = $q.defer();
 
                 var sendData = {
                     team:team,
-                    user:user
+                    user:bIdentity.currentUser
                 };
 
                 teamApi.save({data:sendData}, function () {
                         dfd.resolve(true);
                     }, function () {
-                        dfd.reject(true);
+                        dfd.reject(false);
                     });
 
                 return dfd.promise;
             },
 
-            updateTeam: function () {
+            updateTeam: function (team) {
+                var dfd = $q.defer();
+                var sendData = {
+                    team:team,
+                    user:bIdentity.currentUser
+                };
+                var teamStatus = new teamApi(sendData);
 
+                teamStatus.$update()
+                    .then(function () {
+                        dfd.resolve(true);
+                    }, function () {
+                        dfd.reject(false);
+                    });
+
+                return dfd.promise;
             }
         }
     }
