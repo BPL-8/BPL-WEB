@@ -24,8 +24,10 @@ bplApp.controller('bAddTeamCtrlAdmin',
             {id:4 , name:"IS"},
             {id:5 , name:"EC"},
             {id:6 , name:"CHEMICAL"},
-            {id:6 , name:"CIVIL"},
-            {id:7 , name:"CS & E"}
+            {id:7 , name:"CIVIL"},
+            {id:8, name:"M-TECH"},
+            {id:9, name:"BIO-TECH"},
+            {id:9 , name:"CS & E"}
         ]
     }
 );
