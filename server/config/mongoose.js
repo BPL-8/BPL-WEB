@@ -2,6 +2,7 @@
 var mongoose = require('mongoose');
 var Team = require('../model/team');
 var User = require('../model/User');
+var Match = require('../model/Match');
 
 module.exports = function (config) {
     mongoose.connect(config.db);
@@ -18,4 +19,5 @@ module.exports = function (config) {
 
     Team.createDefault();
     User.createDefaultUsers();
+    Match.createDefault();
 };

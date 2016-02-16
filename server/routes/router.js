@@ -4,10 +4,13 @@ var auth = require('../auth/index');
 
 module.exports = function (app) {
     app.get('/api/v1/teams', teamApi.getTeams);
+    app.get('/api/v1/team/:tId', teamApi.getIndTeam);
+    app.get('/api/v1/fixtures', teamApi.getMatches);
 
     //adminApi
     app.post('/api/v1/manageTeam', teamAdminApi.addTeam);
     app.put('/api/v1/manageTeam', teamAdminApi.updateTeam);
+    app.post('/api/v1/matchFixtures', teamAdminApi.addMatch);
 
 
     app.post('/login', auth.authenticate);

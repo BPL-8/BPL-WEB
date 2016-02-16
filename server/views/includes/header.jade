@@ -8,6 +8,8 @@ div#sidebar.uk-offcanvas
     div.uk-offcanvas-bar.uk-offcanvas-bar-flip(onclick="jQuery.UIkit.offcanvas.hide();$('body').height($(window).height());")
         ul.uk-nav.uk-nav-offcanvas(data-uk-nav)
             li
+                a(ng-href='/fixtures' style='padding-left:12px') FIXTURES
+            li
                 a(ng-href='/teams' style='padding-left:12px') TEAMS
             li
                 a(ng-href='/rules' style='padding-left:12px') RULES

@@ -21,6 +21,10 @@ bplApp.config(
                 templateUrl:'/partials/reg/main',
                 controller:'bRegCtrl'
             })
+            .when('/fixtures',{
+                templateUrl:'/partials/fixtures/main',
+                controller:'bFixturesCtrl'
+            })
             .when('/rules',{
                 templateUrl:'/partials/rules/main'
             })
@@ -49,6 +53,11 @@ bplApp.config(
             .when('/admin/updateTeam',{
                 templateUrl:'/partials/admin/updateTeam/index',
                 controller:'bUpdateTeamCtrlAdmin',
+                resolve:routeRoleCheck.user
+            })
+            .when('/admin/addMatch',{
+                templateUrl:'/partials/admin/addMatch/main',
+                controller:'bAddMatchCtrlAdmin',
                 resolve:routeRoleCheck.user
             })
             .otherwise({redirectTo:'/index'});

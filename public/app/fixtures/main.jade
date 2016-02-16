@@ -1,0 +1,44 @@
+div#gallery
+    div.regHeader
+        h1.reg.uk-vertical-align-middle.uk-container.uk-container-center(style='') FIXTURES
+
+div.uk-container.uk-container-center
+    table.uk-table(style='text-align:left;font-size:20px')
+        thead
+            tr.uk-grid
+                th.uk-width-1-10
+                    strong #
+                td.uk-width-3-10
+                    strong MATCH
+                td.uk-width-3-10
+                    strong DATE
+                td.uk-width-3-10
+                    strong TIMING
+
+        tbody
+            tr#table-fixtures.uk-grid(ng-repeat='match in matches')
+                td.uk-width-1-10 {{$index + 1}}
+                td.uk-width-3-10
+                    div(ng-hide='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext')
+                        |<p class='uk-margin-top-0'> {{match.teamOne.teamName}} <strong> VS </strong> {{match.teamTwo.teamName}} </p>
+                    div(ng-show='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext' style='background:lightgreen')
+                        |<p class='uk-margin-top-0' ng-show='match.teamOne.qualifiedForNext' > <strong>{{match.teamOne.teamName | uppercase}}</strong> <i> - WINNERS</i></p>
+                        |<p class='uk-margin-top-0' ng-show='match.teamTwo.qualifiedForNext' > <strong>{{match.teamTwo.teamName | uppercase}}</strong> <i> - WINNERS</i></p>
+
+                td.uk-width-3-10
+                    div
+                        p {{match.matchDate | date:'EEE, d-MMM-yyyy'}}
+
+
+                td.uk-width-3-10
+                    div
+                        p {{match.matchTime | date:'h:mm a'}}
+|<style>
+| .view{background:#f2f2f4;}
+| .uk-navbar{
+|     background:seagreen;
+| }
+|.regHeader{background:seagreen}
+|.uk-navbar-toggle{color:lawngreen;}
+|.uk-navbar-toggle:hover{color:lawngreen;}
+|<\style>

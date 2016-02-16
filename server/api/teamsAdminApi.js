@@ -1,4 +1,5 @@
 var Team = require('mongoose').model('Team');
+var Match = require('mongoose').model('Match');
 
 exports.addTeam = function (req, res, next) {
     if(!req.user){
@@ -48,6 +49,22 @@ exports.updateTeam = function (req, res, next) {
             team.save();
             res.send(true);
         });
+    }else{
+        res.status(400);
+        res.send()
+    }
+};
+
+exports.addMatch = function(req, res){
+    if(!req.user){
+        res.status(400);
+        res.send();
+    }else if(req.user.userName === req.body.data.user.userName){
+        var match = req.body.data.match;
+
+        Match.create(match);
+
+        res.send(true);
     }else{
         res.status(400);
         res.send()
