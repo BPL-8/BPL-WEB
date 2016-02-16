@@ -2,7 +2,7 @@
 var mongoose = require('mongoose');
 var Team = require('../model/team');
 var User = require('../model/User');
-var Match = require('../model/Match');
+var Match = require('../model/match');
 
 module.exports = function (config) {
     mongoose.connect(config.db);

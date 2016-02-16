@@ -13,7 +13,7 @@ var Match = mongoose.model('Match', matchSchema);
 
 exports.createDefault = function () {
     Match.find({}).exec(function (err, doc) {
-        if(doc.length === 0){
+        if(doc.length == 0){
             Match.create({
                 teamOne:"0",
                 teamTwo:"1",
