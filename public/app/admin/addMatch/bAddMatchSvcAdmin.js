@@ -10,7 +10,7 @@ bplApp.factory('bAddMatchSvcAdmin',
                     teamOne:JSON.parse(match.teamOne)._id,
                     teamTwo:JSON.parse(match.teamTwo)._id,
                     round:match.round,
-                    matchDate:match.matchTime,
+                    matchDate:match.matchDate,
                     matchTime:match.matchTime
                 };
 
