@@ -10,6 +10,8 @@ bplApp.controller('bUpdateTeamCtrlAdmin',
 
         $scope.curTeam = '0';
 
+        $scope.order = "ScoreTotal";
+
         $scope.openEdit = function (team, index) {
             $scope.curTeam = team;
             $scope.curTeam.ScoreForThisRound = '';
