@@ -60,6 +60,11 @@ bplApp.config(
                 controller:'bAddMatchCtrlAdmin',
                 resolve:routeRoleCheck.user
             })
+            .when('/admin/updateMatch',{
+                templateUrl:'/partials/admin/updateMatch/main',
+                controller:'bUpdateMatchCtrlAdmin',
+                resolve:routeRoleCheck.user
+            })
             .otherwise({redirectTo:'/index'});
     }
 );
