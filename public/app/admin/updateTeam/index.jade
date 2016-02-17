@@ -9,7 +9,7 @@ div
                     option(value='branch') branch
                     option(value='ScoreTotal') score
 div.uk-container.uk-container-center.team-container(style='background:#f2f2f4')
-    div.team(ng-repeat="team in teams | toArray:false | orderBy:order" ng-click='openEdit(team, $index)'   style='padding:15px;background:white')
+    div.team(ng-repeat="team in teams | toArray:false | orderBy:order:true" ng-click='openEdit(team, $index)'   style='padding:15px;background:white')
         div.uk-grid.uk-width-1-1
             h1.uk-h1.uk-width-4-5(style='text-align:left') {{team.teamName | uppercase}}
 
