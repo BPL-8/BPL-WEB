@@ -16,8 +16,8 @@ div.uk-container.uk-container-center
                     strong TIMING
 
         tbody
-            tr#table-fixtures.uk-grid(ng-repeat='match in matches | toArray:false | orderBy:"matchDate"' ng-hide="($last + 1 || $last)" )
-                td.uk-width-1-10 {{$index}}
+            tr#table-fixtures.uk-grid(ng-repeat='match in matches')
+                td.uk-width-1-10 {{$index + 1}}
                 td.uk-width-3-10
                     div(ng-hide='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext')
                         |<p class='uk-margin-top-0'> {{match.teamOne.teamName | uppercase}} <strong> VS </strong> {{match.teamTwo.teamName | uppercase}} </p>
