@@ -34,8 +34,6 @@ div.uk-container-center
                 div.uk-form-row
                     label.uk-form-label Time
                     input.uk-form-controls(type='time' ng-model='match.matchTime' ,required placeholder='Play Time')
-
-        p {{team.matchTime}}
         div.uk-container-center.uk-container(style='text-align:center;padding:20px')
             button.uk-button(ng-disabled='addMatchForm.$invalid' ng-click='addMatch(match)') ADD TEAM
 

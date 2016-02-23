@@ -1,4 +1,4 @@
-var bplApp = angular.module('bplApp', ['ngResource','ngRoute','angular-toArrayFilter']);
+var bplApp = angular.module('bplApp', ['ngResource','ngRoute','angular-toArrayFilter','ngProgress']);
 
 bplApp.config(
     function ($routeProvider, $locationProvider) {

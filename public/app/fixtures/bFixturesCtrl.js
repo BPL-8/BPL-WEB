@@ -1,13 +1,22 @@
 bplApp.controller('bFixturesCtrl'
-    , function ($scope, bFixturesSvc, bTeamSvc) {
+    , function ($scope, bFixturesSvc, bTeamSvc, ngProgressFactory) {
         $scope.matches = {};
+        $scope.ngProgress = ngProgressFactory.createInstance();
+        $scope.ngProgress.setColor('black');
+
 
         bFixturesSvc.getData()
             .then(function (data) {
-                for(var i = 0; i < data.length; i++) assignTeamFor(data[i]);
+                $scope.ngProgress.start();
+
+                for(var i = 0; i < data.length; i++) {
+                    $scope.ngProgress.set((data.length - i)%100);
+                    assignTeamFor(data[i]);
+                }
 
                 $scope.matches = data;
 
+                $scope.ngProgress.complete();
             }, function () {
                 console.log('err');
             });
