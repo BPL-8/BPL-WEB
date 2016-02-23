@@ -10,18 +10,16 @@ bplApp.controller('bFixturesCtrl'
                 $scope.ngProgress.start();
 
                 for(var i = 0; i < data.length; i++) {
-                    $scope.ngProgress.set((data.length - i)%100);
-                    assignTeamFor(data[i]);
+                    assignTeamFor(data[i], i);
                 }
 
                 $scope.matches = data;
-
-                $scope.ngProgress.complete();
             }, function () {
                 console.log('err');
             });
 
-        function assignTeamFor(data){
+        function assignTeamFor(data, i){
+            $scope.ngProgress.set((data.length - i)%100);
             bTeamSvc.getIndividualTeam(data.teamOne)
                 .then(function (team) {
                     data.teamOne = team;
@@ -36,5 +34,7 @@ bplApp.controller('bFixturesCtrl'
                     console.log('err');
                 })
         }
+
+        $scope.ngProgress.complete();
     }
 );
