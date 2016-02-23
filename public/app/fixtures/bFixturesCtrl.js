@@ -20,7 +20,7 @@ bplApp.controller('bFixturesCtrl'
             });
 
         function assignTeamFor(data, i){
-            $scope.ngProgress.set(((data.length - i)*100)%100);
+            $scope.ngProgress.set(((data.length - i)*10)%100);
             bTeamSvc.getIndividualTeam(data.teamOne)
                 .then(function (team) {
                     data.teamOne = team;
