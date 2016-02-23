@@ -3,6 +3,7 @@ bplApp.controller('bFixturesCtrl'
         $scope.matches = {};
         $scope.ngProgress = ngProgressFactory.createInstance();
         $scope.ngProgress.setColor('black');
+        $scope.ngProgress.set(70);
 
 
         bFixturesSvc.getData()
