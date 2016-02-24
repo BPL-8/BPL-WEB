@@ -2,7 +2,7 @@ bplApp.controller('bFixturesCtrl'
     , function ($scope, bFixturesSvc, bTeamSvc, ngProgressFactory) {
         $scope.matches = {};
         $scope.ngProgress = ngProgressFactory.createInstance();
-        $scope.ngProgress.setColor('black');
+        $scope.ngProgress.setColor('red');
         $scope.ngProgress.set(70);
 
 

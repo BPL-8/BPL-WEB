@@ -11,7 +11,7 @@ bplApp.controller('bRegCtrl',
         ];
 
         $scope.ngProgress = ngProgressFactory.createInstance();
-        $scope.ngProgress.setColor('black');
+        $scope.ngProgress.setColor('red');
         $scope.ngProgress.set(70);
 
         $timeout(function () {

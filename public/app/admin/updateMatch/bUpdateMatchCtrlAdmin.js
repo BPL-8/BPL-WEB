@@ -2,7 +2,7 @@ bplApp.controller('bUpdateMatchCtrlAdmin',
     function bUpdateMatchCtrlAdmin ($scope, bFixturesSvc, bTeamSvc, ngProgressFactory) {
         $scope.matches = {};
         $scope.ngProgress = ngProgressFactory.createInstance();
-        $scope.ngProgress.setColor('black');
+        $scope.ngProgress.setColor('red');
         bFixturesSvc.getData()
             .then(function (data) {
                 for(var i = 0; i < data.length; i++) assignTeamFor(data[i]);

@@ -2,7 +2,7 @@ bplApp.controller('bTeamCtrl',
     function bTeamCtrl ($scope, bTeamSvc, ngProgressFactory, $timeout) {
         $scope.teams = {};
         $scope.ngProgress = ngProgressFactory.createInstance();
-        $scope.ngProgress.setColor('black');
+        $scope.ngProgress.setColor('red');
         $scope.ngProgress.set(70);
 
         bTeamSvc.getTreams()
