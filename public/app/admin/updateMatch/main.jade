@@ -2,6 +2,10 @@ div
     div
         h1.reg.uk-vertical-align-middle.uk-container.uk-container-center(style='color:black') Update Match Fixtures
 
+div.uk-container.uk-container-center(style='text-align:center;font-size:20px;')
+    label all
+    input.uk-checkbox(type='checkbox' ng-model='showAll' ng-value='false')
+
 div.uk-container.uk-container-center.team-container(style='background:#f2f2f4;')
     table.uk-table(style='text-align:left;font-size:20px;margin-top:20px')
         thead
@@ -16,10 +20,10 @@ div.uk-container.uk-container-center.team-container(style='background:#f2f2f4;')
                     strong
 
         tbody
-            tr#table-fixtures.uk-grid(ng-repeat='match in matches' ng-hide='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext')
+            tr#table-fixtures.uk-grid(ng-repeat='match in matches' ng-hide='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext' ng-show='showAll')
                 td.uk-width-1-10 {{$index + 1}}
                 td.uk-width-3-10
-                    div(ng-hide='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext')
+                    div(ng-hide='(!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext)')
                         | <p class='uk-margin-top-0'> {{match.teamOne.teamName | uppercase}} <strong> VS </strong> {{match.teamTwo.teamName | uppercase}} </p>
                     div(ng-show='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext')
                         | <p class='uk-margin-top-0' ng-show='match.teamOne.qualifiedForNext' > <strong>{{match.teamOne.teamName | uppercase}}</strong> <i> - WON!</i> </p>
@@ -34,7 +38,7 @@ div.uk-container.uk-container-center.team-container(style='background:#f2f2f4;')
 
                 td.uk-width-1-10
                     div
-                        button.uk-button.ut(ng-click='openEdit(match, $index)' ng-disabled='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext' style='background:lightgreen')
+                        button.uk-button.ut(ng-click='openEdit(match, $index)' style='background:lightgreen')
                             i.uk-icon-pencil
 
                 td.uk-width-1-10

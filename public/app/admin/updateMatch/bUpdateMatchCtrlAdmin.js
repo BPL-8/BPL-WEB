@@ -5,6 +5,8 @@ bplApp.controller('bUpdateMatchCtrlAdmin',
         $scope.ngProgress.setColor('red');
         getMatches();
 
+        $scope.showAll = false;
+
         $scope.openEdit = function (team, index) {
             $scope.curMatch = team;
             $scope.curTeamIndex = index;
