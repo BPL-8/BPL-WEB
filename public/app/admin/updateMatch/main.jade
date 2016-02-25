@@ -24,13 +24,23 @@ div.uk-container.uk-container-center.team-container(style='background:#f2f2f4;')
                     div(ng-show='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext')
                         | <p class='uk-margin-top-0' ng-show='match.teamOne.qualifiedForNext' > <strong>{{match.teamOne.teamName | uppercase}}</strong> <i> - WON!</i> </p>
                         | <p class='uk-margin-top-0' ng-show='match.teamTwo.qualifiedForNext' > <strong>{{match.teamTwo.teamName | uppercase}}</strong> <i> - WON!</i> </p>
-                td.uk-width-3-10
+                td.uk-width-2-10
                     div
-                        button.uk-button.ut(ng-click='openEdit(match, $index)' ng-disabled='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext' style='background:lightgreen') UPDATE
+                        p {{match.matchDate | date:'EEE, d-MMM-yyyy'}}
 
-                td.uk-width-3-10
+                td.uk-width-2-10
                     div
-                        button.uk-button.ut(ng-click='deleteMatch(match, $index)' ng-disabled='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext' style='background:pink') DELETE
+                        p {{match.matchTime | date:'h:mm a'}}
+
+                td.uk-width-1-10
+                    div
+                        button.uk-button.ut(ng-click='openEdit(match, $index)' ng-disabled='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext' style='background:lightgreen')
+                            i.uk-icon-pencil
+
+                td.uk-width-1-10
+                    div
+                        button.uk-button.ut(ng-click='deleteMatch(match, $index)' ng-disabled='!match.teamOne.qualifiedForNext || !match.teamTwo.qualifiedForNext' style='background:pink')
+                            i.uk-icon-close
 
 div#modal.uk-modal
     div.uk-container-center.uk-modal-dialog.uk-modal-dialog-lightbox(style='padding:20px;background:white')

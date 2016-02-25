@@ -70,3 +70,32 @@ exports.addMatch = function(req, res){
         res.send()
     }
 };
+
+exports.updateIndMatch= function(req,res){
+    if(!req.user){
+        res.status(400);
+        res.send();
+    }else if(req.user.userName === req.body.user.userName){
+        var match = req.body.newData;
+
+        Match.update({_id:req.params.tId}, match, function (err, count) {
+            if(err) res.send({reason:false});
+
+            if(count) res.send(true);
+        });
+    }else{
+        res.status(400);
+        res.send()
+    }
+};
+
+exports.deleteIndMatch = function(req,res){
+    if(!req.user){
+        res.status(400);
+        res.send();
+    }else{
+        Match.find({_id:req.params.tId}).remove().exec(function () {
+           res.send(true);
+        });
+    }
+};

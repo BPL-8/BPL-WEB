@@ -8,11 +8,16 @@ module.exports = function (app) {
     app.get('/api/v1/fixtures', teamApi.getMatches);
 
     //adminApi
+    //>teamManagement
     app.post('/api/v1/manageTeam', teamAdminApi.addTeam);
     app.put('/api/v1/manageTeam', teamAdminApi.updateTeam);
+    //>FixturesAddition
     app.post('/api/v1/matchFixtures', teamAdminApi.addMatch);
+    //>IndividualFixturesUpdate
+    app.post('/api/v1/team/:tId', teamAdminApi.updateIndMatch);
+    app.delete('/api/v1/team/:tId', teamAdminApi.deleteIndMatch);
 
-
+    //adminLogin
     app.post('/login', auth.authenticate);
     //DONE//
 
