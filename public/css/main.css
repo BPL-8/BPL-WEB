@@ -135,6 +135,13 @@ html{
     margin-top:0;
 }
 
+.refresh-view{
+    position:absolute;
+    top:29px;
+    right:69px;
+    color:lawngreen;
+}
+
 @media screen and (max-width:420px) {
     #regBtn, .reg{
         font-size: 1.5em;

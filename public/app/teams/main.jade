@@ -1,11 +1,12 @@
-div.refresh-view(style='position:absolute;float:right')
-    i.uk-icon-refresh
+div.refresh-view
+    button(ng-click='refreshView()' style="background:transparent;border:0")
+        img(ng-src='/images/cts/refresh.svg')
 div#gallery
     div.regHeader
         h1.reg.uk-vertical-align-middle.uk-container.uk-container-center(style='') TEAMS
 
 div.uk-container.uk-container-center.team-container(style='background:#f2f2f4')
-    div.team(ng-repeat="team in teams | toArray:false | orderBy:ScoreTotal" ng-hide='!team.qualifiedForNext'  style='padding:15px;background:white')
+    div.team(ng-repeat="team in teams | toArray:false | orderBy:'ScoreTotal':false" ng-hide='!team.qualifiedForNext'  style='padding:15px;background:white')
         div.uk-grid.uk-width-1-1
             h1.uk-h1.uk-width-4-5(style='text-align:left') {{team.teamName | uppercase}}
             button.uk-button(style='margin:auto 0 auto auto;background:transparent' ng-click='openModal(team)')

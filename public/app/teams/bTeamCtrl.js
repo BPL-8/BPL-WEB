@@ -10,7 +10,7 @@ bplApp.controller('bTeamCtrl',
                 $scope.teams = data;
 
                 for(var i = 0; i < $scope.teams.length; i++) {
-                    $scope.teams[i].ScoreTotal = parseInt($scope.teams[i].ScoreTotal);
+                    $scope.teams[i].ScoreTotal = parseFloat($scope.teams[i].ScoreTotal);
                 }
 
                 $timeout(function () {
@@ -23,6 +23,23 @@ bplApp.controller('bTeamCtrl',
         $scope.openModal = function (team) {
             $scope.curTeam = team;
             $.UIkit.modal('#modal').show();
+        };
+
+        $scope.refreshView = function () {
+            $scope.teams = {};
+
+            bTeamSvc.getTreams()
+                .then(function (data) {
+                    $scope.teams = data;
+
+                    for(var i = 0; i < $scope.teams.length; i++) {
+                        $scope.teams[i].ScoreTotal = parseFloat($scope.teams[i].ScoreTotal);
+                    }
+
+                    $timeout(function () {
+                        $scope.ngProgress.complete();
+                    },2000);
+                });
         }
     }
 );

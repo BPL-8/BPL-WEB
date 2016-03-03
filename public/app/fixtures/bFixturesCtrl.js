@@ -5,6 +5,23 @@ bplApp.controller('bFixturesCtrl'
         $scope.ngProgress.setColor('red');
         $scope.ngProgress.set(70);
 
+        $scope.refreshView = function () {
+            $scope.matches = {}
+
+            bFixturesSvc.getData()
+                .then(function (data) {
+                    $scope.ngProgress.start();
+
+                    for(var i = 0; i < data.length; i++) {
+                        assignTeamFor(data[i], i);
+                    }
+
+                    $scope.matches = data;
+                    $scope.ngProgress.complete();
+                }, function () {
+                    console.log('err');
+                });
+        };
 
         bFixturesSvc.getData()
             .then(function (data) {
