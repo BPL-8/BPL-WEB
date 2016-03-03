@@ -47,7 +47,7 @@ div#modal.uk-modal
                 input#totalScore(type='number' ng-model='curTeam.ScoreTotal' placeholder='Total Score' ,required)
 
             div
-                button.uk-button.uk-primary(ng-disabled='TotalScore.$invalid' ng-click='updateTeam(curTeam)' style='font-size:20px') update
+                button.uk-button.uk-primary(ng-disabled='TotalScore.$invalid' ng-click='updateTotalScore(curTeam)' style='font-size:20px') update
 
 |<style>
 | .view{background:#f2f2f4;}

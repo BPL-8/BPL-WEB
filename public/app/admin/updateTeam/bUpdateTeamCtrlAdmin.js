@@ -16,6 +16,7 @@ bplApp.controller('bUpdateTeamCtrlAdmin',
             $scope.curTeam = team;
             $scope.curTeam.ScoreForThisRound = '';
             $scope.curTeamIndex = index;
+            $scope.curTeam.ScoreTotal = parseInt($scope.curTeam.ScoreTotal);
             $.UIkit.modal('#modal').show();
         };
 
