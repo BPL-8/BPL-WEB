@@ -21,7 +21,7 @@ bplApp.controller('bUpdateTeamCtrlAdmin',
         };
 
         $scope.updateTeam = function (team) {
-            team.ScoreTotal =  parseInt($scope.teams[$scope.curTeamIndex].ScoreTotal + parseInt(team.ScoreForThisRound));
+            team.ScoreTotal =  parseInt(parseInt($scope.teams[$scope.curTeamIndex].ScoreTotal) + parseInt(team.ScoreForThisRound));
 
             bTeamSvcAdmin.updateTeam(team)
                 .then(function () {
