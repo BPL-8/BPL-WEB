@@ -37,6 +37,18 @@ div#modal.uk-modal
                 button.uk-button(ng-disabled='teamInfoForm.$invalid' ng-click='updateTeam(curTeam)' style='font-size:20px') update
 
 
+        hr
+
+        form(name='TotalScoreForm' style='text-align:center;font-size:14px').uk-form
+            legend total Score
+
+            div(style='padding:12px')
+                label(for='totalScore' style='padding:12px') Score(This Match)
+                input#totalScore(type='number' ng-model='curTeam.ScoreTotal' placeholder='Total Score' ,required)
+
+            div
+                button.uk-button.uk-primary(ng-disabled='TotalScore.$invalid' ng-click='updateTeam(curTeam)' style='font-size:20px') update
+
 |<style>
 | .view{background:#f2f2f4;}
 | .uk-navbar{

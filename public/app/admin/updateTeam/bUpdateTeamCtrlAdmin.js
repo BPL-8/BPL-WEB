@@ -25,12 +25,25 @@ bplApp.controller('bUpdateTeamCtrlAdmin',
             bTeamSvcAdmin.updateTeam(team)
                 .then(function () {
                     console.log('success');
+                    $scope.curTeam = {};
                     $.UIkit.modal('#modal').hide();
                 }, function () {
                     console.log('err');
                     $.UIkit.modal('#modal').hide();
                 })
 
+        };
+
+        $scope.updateTotalScore = function (team) {
+            bTeamSvcAdmin.updateTeam(team)
+                .then(function () {
+                    console.log('success');
+                    $scope.curTeam = {};
+                    $.UIkit.modal('#modal').hide();
+                }, function () {
+                    console.log('err');
+                    $.UIkit.modal('#modal').hide();
+                })
         }
     }
 );
