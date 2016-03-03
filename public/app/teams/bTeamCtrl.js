@@ -5,7 +5,8 @@ bplApp.controller('bTeamCtrl',
         $scope.ngProgress.setColor('red');
         $scope.ngProgress.set(70);
 
-        $scope.rotate = {transform:"rotate(360deg)"};
+        $scope.hideBtn = false;
+
 
         bTeamSvc.getTreams()
             .then(function (data) {
@@ -29,7 +30,7 @@ bplApp.controller('bTeamCtrl',
 
         $scope.refreshView = function () {
             $scope.teams = {};
-            $scope.rotate = "uk-icon-spin";
+            $scope.hideBtn = true;
 
             bTeamSvc.getTreams()
                 .then(function (data) {
@@ -41,6 +42,7 @@ bplApp.controller('bTeamCtrl',
 
                     $timeout(function () {
                         $scope.ngProgress.complete();
+                        $scope.hideBtn = false;
                     },2000);
                 });
         }

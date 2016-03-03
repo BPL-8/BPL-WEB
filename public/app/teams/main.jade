@@ -1,6 +1,7 @@
 div.refresh-view
-    button(ng-click='refreshView()' style="background:transparent;border:0")
+    button(ng-click='refreshView()' style="background:transparent;border:0" ng-hide="hideBtn")
         img(ng-src='/images/cts/refresh.svg' width="100%")
+    i.uk-icon-refresh.uk-icon-spin(ng-show="hideBtn")
 div#gallery
     div.regHeader
         h1.reg.uk-vertical-align-middle.uk-container.uk-container-center(style='') TEAMS

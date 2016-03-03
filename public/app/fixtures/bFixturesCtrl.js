@@ -1,12 +1,14 @@
 bplApp.controller('bFixturesCtrl'
-    , function ($scope, bFixturesSvc, bTeamSvc, ngProgressFactory) {
+    , function ($scope, bFixturesSvc, bTeamSvc, ngProgressFactory, $timeout) {
         $scope.matches = {};
         $scope.ngProgress = ngProgressFactory.createInstance();
         $scope.ngProgress.setColor('red');
         $scope.ngProgress.set(70);
+        $scope.hideBtn = false;
 
         $scope.refreshView = function () {
-            $scope.matches = {}
+            $scope.hideBtn = true;
+            $scope.matches = {};
 
             bFixturesSvc.getData()
                 .then(function (data) {
@@ -17,7 +19,10 @@ bplApp.controller('bFixturesCtrl'
                     }
 
                     $scope.matches = data;
-                    $scope.ngProgress.complete();
+                    $timeout(function () {
+                        $scope.ngProgress.complete();
+                        $scope.hideBtn = false;
+                    },2000);
                 }, function () {
                     console.log('err');
                 });
