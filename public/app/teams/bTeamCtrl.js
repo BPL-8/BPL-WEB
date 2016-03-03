@@ -8,6 +8,11 @@ bplApp.controller('bTeamCtrl',
         bTeamSvc.getTreams()
             .then(function (data) {
                 $scope.teams = data;
+
+                for(var i = 0; i < $scope.teams.length; i++) {
+                    $scope.teams[i].ScoreTotal = parseInt($scope.teams[i].ScoreTotal);
+                }
+
                 $timeout(function () {
                     $scope.ngProgress.complete();
                 },2000);
