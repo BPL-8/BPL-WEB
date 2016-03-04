@@ -84,12 +84,18 @@ html{
     color: lawngreen;
 }
 
-#regBtn{
+.regBtn, .regBtn:hover, .regBtn:active{
     background: transparent;
     color: lawngreen;
     font-size: 60px;
     font-weight:bolder;
     padding-top:60px;
+    margin-top:12px;
+}
+
+.regBtn:hover{
+    color:black;
+    background: lawngreen;
 }
 
 #brand{
@@ -148,7 +154,7 @@ html{
     .refresh-view{
         font-size:300%;
     }
-    #regBtn, .reg{
+    .regBtn, .reg, .regBtn:active{
         font-size: 1.5em;
         padding-top:30px;
     }
