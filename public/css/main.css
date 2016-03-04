@@ -141,9 +141,13 @@ html{
     right:69px;
     color:lawngreen;
     margin:auto;
+    font-size:100%
 }
 
 @media screen and (max-width:600px) {
+    .refresh-view{
+        font-size:300%;
+    }
     #regBtn, .reg{
         font-size: 1.5em;
         padding-top:30px;
