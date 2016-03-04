@@ -144,11 +144,12 @@ html{
 }
 
 @media screen and (max-width:600px) {
-    #regBtn, .reg, .tm-name{
+    #regBtn, .reg{
         font-size: 1.5em;
         padding-top:30px;
     }
     .tm-name{
+        font-size: 1.5em;
         padding-top:0;
     }
 
