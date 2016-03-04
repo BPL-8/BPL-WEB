@@ -1,5 +1,5 @@
 bplApp.controller('bUpdateTeamCtrlAdmin',
-    function bUpdateTeamCtrlAdmin ($scope, bTeamSvc , bTeamSvcAdmin) {
+    function bUpdateTeamCtrlAdmin ($scope, bTeamSvc , bTeamSvcAdmin, $window) {
         $scope.teams = {};
         $scope.curTeamIndex = '';
 
@@ -17,16 +17,18 @@ bplApp.controller('bUpdateTeamCtrlAdmin',
             $scope.curTeam.ScoreForThisRound = '';
             $scope.curTeamIndex = index;
             $scope.curTeam.ScoreTotal = parseInt($scope.curTeam.ScoreTotal);
+            $scope.totalScore = parseInt($scope.curTeam.ScoreTotal);
             $.UIkit.modal('#modal').show();
         };
 
         $scope.updateTeam = function (team) {
-            team.ScoreTotal =  parseInt(parseInt($scope.teams[$scope.curTeamIndex].ScoreTotal) + parseInt(team.ScoreForThisRound));
+            console.log(parseInt($scope.totalScore));
+            console.log(parseInt(team.ScoreForThisRound));
+            $window.ts = team.ScoreTotal =  parseInt(parseInt($scope.totalScore) + parseInt(team.ScoreForThisRound));
 
             bTeamSvcAdmin.updateTeam(team)
                 .then(function () {
                     console.log('success');
-                    $scope.curTeam = {};
                     $.UIkit.modal('#modal').hide();
                 }, function () {
                     console.log('err');
@@ -39,7 +41,6 @@ bplApp.controller('bUpdateTeamCtrlAdmin',
             bTeamSvcAdmin.updateTeam(team)
                 .then(function () {
                     console.log('success');
-                    $scope.curTeam = {};
                     $.UIkit.modal('#modal').hide();
                 }, function () {
                     console.log('err');
