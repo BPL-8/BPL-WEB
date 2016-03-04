@@ -1,7 +1,7 @@
 div.refresh-view
     button(ng-click='refreshView()' style="background:transparent;border:0;color:lawngreen" ng-hide="hideBtn")
-        i.uk-icon-refresh(ng-hide="hideBtn" style='font-size:34;margin:auto')
-    i.uk-icon-refresh.uk-icon-spin(ng-show="hideBtn" style='font-size:34;margin:auto')
+        i.uk-icon-refresh(ng-hide="hideBtn" style='font-size:34;')
+        i.uk-icon-refresh.uk-icon-spin(ng-show="hideBtn" style='font-size:34;')
 div#gallery
     div.regHeader
         h1.reg.uk-vertical-align-middle.uk-container.uk-container-center(style='') TEAMS
@@ -9,7 +9,7 @@ div#gallery
 div.uk-container.uk-container-center.team-container(style='background:#f2f2f4')
     div.team(ng-repeat="team in teams | toArray:false | orderBy:'ScoreTotal':true" ng-hide='!team.qualifiedForNext'  style='padding:15px;background:white')
         div.uk-grid.uk-width-1-1
-            h1.uk-h1.uk-width-4-5(style='text-align:left') {{team.teamName | uppercase}}
+            h1.uk-h1.uk-width-4-5.tm-name(style='text-align:left') {{team.teamName | uppercase}}
             button.uk-button(style='margin:auto 0 auto auto;background:transparent' ng-click='openModal(team)')
                 i.uk.uk-icon-ellipsis-h
 

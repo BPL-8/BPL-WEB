@@ -1,13 +1,13 @@
 div.refresh-view
     button(ng-click='refreshView()' style="background:transparent;border:0;color:lawngreen" ng-hide="hideBtn")
-        i.uk-icon-refresh(ng-hide="hideBtn" style='font-size:34;margin:auto')
-    i.uk-icon-refresh.uk-icon-spin(ng-show="hideBtn" style='font-size:34;margin:auto')
+        i.uk-icon-refresh(ng-hide="hideBtn" style='font-size:34;')
+    i.uk-icon-refresh.uk-icon-spin(ng-show="hideBtn" style='font-size:34;')
 
 div#gallery
     div.regHeader
         h1.reg.uk-vertical-align-middle.uk-container.uk-container-center(style='') FIXTURES
         
-div.uk-container.uk-container-center
+div.uk-container.uk-container-center.fixtures
     //@about:second round
     h1.uk-h1(style='border-bottom:2px solid green;margin-top:20px') SECOND ROUND
     table.uk-table(style='text-align:left;font-size:20px;margin-top:20px')

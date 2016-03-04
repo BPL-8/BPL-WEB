@@ -140,15 +140,19 @@ html{
     top:29px;
     right:69px;
     color:lawngreen;
+    margin:auto;
 }
 
-@media screen and (max-width:420px) {
-    #regBtn, .reg{
+@media screen and (max-width:600px) {
+    #regBtn, .reg, .tm-name{
         font-size: 1.5em;
         padding-top:30px;
     }
+    .tm-name{
+        padding-top:0;
+    }
 
-    #table-fixtures{
+    #table-fixtures-1,#table-fixtures-2{
         font-size: 0.6em;
     }
 
