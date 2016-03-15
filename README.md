@@ -1,6 +1,14 @@
 # BPL-WEB
-A full stack web app using MEAN STACK
 
+## A full stack web app using MEAN STACK
+
+## How to run
+
+```
+npm install
+npm start
+
+```
 tree
 ```
 +---node_modules \\as in package
