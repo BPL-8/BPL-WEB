@@ -1,5 +1,6 @@
 # BPL-WEB
 
+<<<<<<< HEAD
 ## A full stack web app using MEAN STACK
 
 ## How to run
@@ -10,6 +11,9 @@ npm start
 
 ```
 tree
+=======
+Directory Tree
+>>>>>>> 77b4777be9d96cd7b2eacd5781ce9ae3474b78b7
 ```
 +---node_modules \\as in package
 +---public
