@@ -1,7 +1,7 @@
 # BPL-WEB
 A full stack web app using MEAN STACK
 
-tree
+Directory Tree
 ```
 +---node_modules \\as in package
 +---public
