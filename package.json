@@ -19,7 +19,7 @@
     "helmet": "^1.1.0",
     "jade": "^1.11.0",
     "kerberos": "0.0.18",
-    "mongoose": "^4.4.2",
+    "mongoose": "^5.9.6",
     "morgan": "^1.6.1",
     "multer": "^1.1.0",
     "node-gyp": "^3.2.1",
